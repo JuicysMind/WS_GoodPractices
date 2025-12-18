@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /* Allocate and initialize an array, checking bounds and errors. [web:8][web:24] */
-int *allocateIntBuffer(int size)
+static int *allocateIntBuffer(const int size)
 {
     int *buffer = NULL;
     int index = 0;
@@ -24,7 +24,7 @@ int *allocateIntBuffer(int size)
 }
 
 /* This function only displays data; it must not free it. [web:21] */
-void displayBuffer(const int *buffer, int size)
+static void displayBuffer(const int *buffer, const int size)
 {
     int index = 0;
 
